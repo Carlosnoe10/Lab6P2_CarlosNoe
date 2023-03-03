@@ -55,6 +55,11 @@ public ArrayList<Albums> ListaDeAlbunesLike;
         this.ContNYA = ContNYA;
     }
 
+    @Override
+    public String toString() {
+        return "Oyentes{" + "ListaDeMeGustas=" + ListaDeMeGustas + ", ListaCreada=" + ListaCreada + ", ListaDeAlbunesLike=" + ListaDeAlbunesLike + '}';
+    }
+
 
 
 }
