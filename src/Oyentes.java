@@ -7,6 +7,7 @@ public ArrayList<Canciones> ListaDeMeGustas;
 public ArrayList<Canciones> ListaCreada;
 public ArrayList<Albums> ListaDeAlbunesLike;
 
+
     public Oyentes(ArrayList<Canciones> ListaDeMeGustas, ArrayList<Canciones> ListaCreada, ArrayList<Albums> ListaDeAlbunesLike, String nombreUWU, String ContNYA) {
         super(nombreUWU, ContNYA);
         this.ListaDeMeGustas = ListaDeMeGustas;
