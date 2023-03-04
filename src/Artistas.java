@@ -53,4 +53,9 @@ public ArrayList<Albums> AlbumsPublica2;
         this.ContNYA = ContNYA;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + ",nombreArtistico=" + nombreArtistico + ", CancionesSubidas=" + CancionesSubidas + ", AlbumsPublica2=" + AlbumsPublica2 + '}';
+    }
+
 }

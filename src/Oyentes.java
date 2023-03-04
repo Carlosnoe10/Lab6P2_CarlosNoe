@@ -57,7 +57,7 @@ public ArrayList<Albums> ListaDeAlbunesLike;
 
     @Override
     public String toString() {
-        return "Oyentes{" + "ListaDeMeGustas=" + ListaDeMeGustas + ", ListaCreada=" + ListaCreada + ", ListaDeAlbunesLike=" + ListaDeAlbunesLike + '}';
+        return super.toString() + ",ListaDeMeGustas," + ListaDeMeGustas + ",ListaCreada," + ListaCreada+ ",ListaDeAlbunesLike," +ListaDeAlbunesLike +",";
     }
 
 

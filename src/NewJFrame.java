@@ -1,6 +1,12 @@
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.tree.DefaultMutableTreeNode;
 
 public class NewJFrame extends javax.swing.JFrame {
 
@@ -47,7 +53,10 @@ public class NewJFrame extends javax.swing.JFrame {
         MenuOyentes = new javax.swing.JFrame();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        Arbolito1 = new javax.swing.JTree();
+        DefaultMutableTreeNode root = new DefaultMutableTreeNode("Albums");
+        DefaultMutableTreeNode node1 = new DefaultMutableTreeNode("Canciones");
+        root.add(node2);
+        Arbolito1 = new javax.swing.JTree(root);
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         Lista1 = new javax.swing.JList<>();
@@ -233,9 +242,9 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel3.setText("Listas Canciones likeadas");
 
         Lista1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+
             public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
+            public String getElementAt(int i) { return (Oyentes)Global.get(i).lista de canciones; }
         });
         jScrollPane2.setViewportView(Lista1);
 
@@ -529,17 +538,26 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_EmpezarActionPerformed
 
     private void SalideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalideActionPerformed
-        
+
     }//GEN-LAST:event_SalideActionPerformed
 
     private void AgregarAListasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarAListasActionPerformed
-    String mam1=  JOptionPane.showInputDialog(MenuArtista, "Ingrese el nuevo nombre de la Lista");
-    ArrayList<Canciones>List= new ArrayList();
-    ListasDeRepro pas= new ListasDeRepro(List,mam1);
-    
-    
-    
-        
+        String mam1 = JOptionPane.showInputDialog(MenuArtista, "Ingrese el nuevo nombre de la Lista");
+        ArrayList<Canciones> List = new ArrayList();
+        for (int i = 0; i < 1; i++) {
+            int opcion = JOptionPane.showConfirmDialog(null, "¿Desea Ingresar canciones?");
+            if (opcion == JOptionPane.YES_OPTION) {
+                i--;
+                String man = JOptionPane.showInputDialog(MenuArtista, "Ingrese el  nombre de la Cancion");
+                String man2 = JOptionPane.showInputDialog(MenuArtista, "Ingrese la duracion de la Cancion");
+                double man2p0 = Double.parseDouble(man2);
+                Canciones new1= new Canciones(man, man2p0,mam1);
+                List.add(new1);
+            } else {
+                i++;
+            }
+        }
+        ListasDeRepro pas = new ListasDeRepro(List, mam1);
     }//GEN-LAST:event_AgregarAListasActionPerformed
 
     /**
@@ -576,11 +594,20 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
     }
-    public static void Vendo(ArrayList<Usuarios> Compro) {
 
-        return Compro;
-    }
+    public static void Vendo(ArrayList<Usuarios> Compro) {
+File archivo = new File("Cosas_Guardades.txt");
+        try (FileWriter fw = new FileWriter(archivo, true)) {
+            for (int i = 0; i < Global.size(); i++) {
+            fw.write(Global.get(i).toString());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     
+        
+    }
+
     public static ArrayList<Usuarios> Compro(ArrayList<Usuarios> Compro) {
 
         return Compro;
