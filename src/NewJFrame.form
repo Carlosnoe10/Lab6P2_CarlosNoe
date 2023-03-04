@@ -15,18 +15,18 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jPasswordField2" min="-2" pref="200" max="-2" attributes="0"/>
+                      <Component id="ConfirmContra" min="-2" pref="200" max="-2" attributes="0"/>
                       <Component id="label5" min="-2" max="-2" attributes="0"/>
                       <Component id="label4" min="-2" max="-2" attributes="0"/>
                       <Component id="label3" min="-2" max="-2" attributes="0"/>
                       <Component id="label6" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="choice1" alignment="0" min="-2" pref="343" max="-2" attributes="0"/>
+                      <Component id="OpcionesDeTipoDeUsuario" alignment="0" min="-2" pref="343" max="-2" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                           <Component id="label2" min="-2" pref="100" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jPasswordField1" alignment="0" pref="200" max="32767" attributes="0"/>
-                              <Component id="jTextField3" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextField2" alignment="0" max="32767" attributes="0"/>
+                              <Component id="Contra" alignment="0" pref="200" max="32767" attributes="0"/>
+                              <Component id="nombreUSU" alignment="0" max="32767" attributes="0"/>
+                              <Component id="nombreVeri" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -34,7 +34,7 @@
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="button20" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="Salir" min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -46,23 +46,23 @@
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Component id="label5" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jTextField3" min="-2" max="-2" attributes="0"/>
+                  <Component id="nombreUSU" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="label4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jTextField2" min="-2" max="-2" attributes="0"/>
+                  <Component id="nombreVeri" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="label3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jPasswordField1" min="-2" max="-2" attributes="0"/>
+                  <Component id="Contra" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="label6" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jPasswordField2" min="-2" max="-2" attributes="0"/>
+                  <Component id="ConfirmContra" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                  <Component id="choice1" min="-2" max="-2" attributes="0"/>
+                  <Component id="OpcionesDeTipoDeUsuario" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="36" max="32767" attributes="0"/>
-                  <Component id="button20" min="-2" max="-2" attributes="0"/>
+                  <Component id="Salir" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -77,27 +77,7 @@
             <Property name="text" type="java.lang.String" value="Sing-In"/>
           </Properties>
         </Component>
-        <Component class="java.awt.Choice" name="choice1">
-        </Component>
-        <Component class="java.awt.Label" name="label3">
-          <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Ingrese su contrasenya"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField2">
-        </Component>
-        <Component class="java.awt.Label" name="label4">
-          <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Confirme"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField3">
+        <Component class="java.awt.Choice" name="OpcionesDeTipoDeUsuario">
         </Component>
         <Component class="java.awt.Label" name="label5">
           <Properties>
@@ -107,6 +87,28 @@
             <Property name="text" type="java.lang.String" value="Ingrese su nombre de usuario: "/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JTextField" name="nombreUSU">
+        </Component>
+        <Component class="java.awt.Label" name="label4">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Confirme"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="nombreVeri">
+        </Component>
+        <Component class="java.awt.Label" name="label3">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Ingrese su contrasenya"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="Contra">
+        </Component>
         <Component class="java.awt.Label" name="label6">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -115,11 +117,9 @@
             <Property name="text" type="java.lang.String" value="Confirme"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="jPasswordField1">
+        <Component class="javax.swing.JPasswordField" name="ConfirmContra">
         </Component>
-        <Component class="javax.swing.JPasswordField" name="jPasswordField2">
-        </Component>
-        <Component class="java.awt.Button" name="button20">
+        <Component class="java.awt.Button" name="Salir">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="99" type="rgb"/>
@@ -134,56 +134,64 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="Salida" min="-2" pref="30" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="label7" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="label8" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="button3" alignment="0" pref="230" max="32767" attributes="0"/>
-                              <Component id="choice2" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jPasswordField3" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTextField4" alignment="0" max="32767" attributes="0"/>
+                              <Component id="Empezar" alignment="0" pref="230" max="32767" attributes="0"/>
+                              <Component id="Tipos" alignment="0" max="32767" attributes="0"/>
+                              <Component id="Contrasenya" alignment="0" max="32767" attributes="0"/>
+                              <Component id="NombreUwu" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="315" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="236" max="-2" attributes="0"/>
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="206" max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="button19" min="-2" pref="30" max="-2" attributes="0"/>
+                  <EmptySpace pref="275" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                   <Component id="label7" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jTextField4" min="-2" max="-2" attributes="0"/>
+                  <Component id="NombreUwu" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="label8" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jPasswordField3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Contrasenya" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                  <Component id="choice2" min="-2" max="-2" attributes="0"/>
+                  <Component id="Tipos" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="24" max="32767" attributes="0"/>
-                  <Component id="button3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Empezar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                  <Component id="button19" min="-2" max="-2" attributes="0"/>
+                  <Component id="Salida" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLabel2">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="18" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Sing-In"/>
+          </Properties>
+        </Component>
         <Component class="java.awt.Label" name="label7">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -192,7 +200,7 @@
             <Property name="text" type="java.lang.String" value="Ingrese su nombre de usuario: "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField4">
+        <Component class="javax.swing.JTextField" name="NombreUwu">
         </Component>
         <Component class="java.awt.Label" name="label8">
           <Properties>
@@ -202,24 +210,16 @@
             <Property name="text" type="java.lang.String" value="Ingrese su contrasenya"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="jPasswordField3">
+        <Component class="javax.swing.JPasswordField" name="Contrasenya">
         </Component>
-        <Component class="java.awt.Button" name="button3">
+        <Component class="java.awt.Button" name="Empezar">
           <Properties>
             <Property name="label" type="java.lang.String" value="Empieze"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Dialog" size="18" style="0"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Sing-In"/>
-          </Properties>
+        <Component class="java.awt.Choice" name="Tipos">
         </Component>
-        <Component class="java.awt.Choice" name="choice2">
-        </Component>
-        <Component class="java.awt.Button" name="button19">
+        <Component class="java.awt.Button" name="Salida">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="99" type="rgb"/>
@@ -248,10 +248,10 @@
                                   <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="button5" min="-2" max="-2" attributes="0"/>
-                                      <Component id="button6" min="-2" max="-2" attributes="0"/>
-                                      <Component id="button7" min="-2" max="-2" attributes="0"/>
-                                      <Component id="button8" min="-2" max="-2" attributes="0"/>
+                                      <Component id="AgregarListas" min="-2" max="-2" attributes="0"/>
+                                      <Component id="EliminarListas" min="-2" max="-2" attributes="0"/>
+                                      <Component id="VerListas" min="-2" max="-2" attributes="0"/>
+                                      <Component id="MODListas" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -266,11 +266,11 @@
                           <Component id="label9" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="212" max="32767" attributes="0"/>
+                  <EmptySpace pref="223" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="button18" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="Salir1" min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -287,13 +287,13 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jScrollPane1" min="-2" pref="148" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <Component id="button5" min="-2" max="-2" attributes="0"/>
+                                  <Component id="AgregarListas" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="button7" min="-2" max="-2" attributes="0"/>
+                                  <Component id="VerListas" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="button6" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EliminarListas" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="button8" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MODListas" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -304,12 +304,17 @@
                       </Group>
                   </Group>
                   <EmptySpace pref="49" max="32767" attributes="0"/>
-                  <Component id="button18" min="-2" max="-2" attributes="0"/>
+                  <Component id="Salir1" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLabel4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Listas de reproduccion"/>
+          </Properties>
+        </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -317,10 +322,15 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTree" name="jTree1">
+            <Component class="javax.swing.JTree" name="Arbolito1">
             </Component>
           </SubComponents>
         </Container>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Listas Canciones likeadas"/>
+          </Properties>
+        </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane2">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -328,7 +338,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JList" name="jList1">
+            <Component class="javax.swing.JList" name="Lista1">
               <Properties>
                 <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                   <StringArray count="5">
@@ -346,43 +356,36 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="java.awt.Button" name="button5">
+        <Component class="java.awt.Button" name="AgregarListas">
           <Properties>
             <Property name="label" type="java.lang.String" value="Agregar Listas"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Listas Canciones preferidas"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Listas de reproduccion"/>
-          </Properties>
-        </Component>
-        <Component class="java.awt.Button" name="button6">
-          <Properties>
-            <Property name="label" type="java.lang.String" value="Eliminar Listas"/>
-          </Properties>
-        </Component>
-        <Component class="java.awt.Button" name="button7">
+        <Component class="java.awt.Button" name="VerListas">
           <Properties>
             <Property name="label" type="java.lang.String" value="Ver Listas"/>
           </Properties>
         </Component>
-        <Component class="java.awt.Button" name="button8">
+        <Component class="java.awt.Button" name="EliminarListas">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="Eliminar Listas"/>
+          </Properties>
+        </Component>
+        <Component class="java.awt.Button" name="MODListas">
           <Properties>
             <Property name="label" type="java.lang.String" value="MOD Listas"/>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MODListasActionPerformed"/>
+          </Events>
         </Component>
         <Component class="java.awt.Label" name="label9">
           <Properties>
             <Property name="text" type="java.lang.String" value="Menu"/>
           </Properties>
         </Component>
-        <Component class="java.awt.Button" name="button18">
+        <Component class="java.awt.Button" name="Salir1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="99" type="rgb"/>
@@ -404,21 +407,21 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="button12" min="-2" max="-2" attributes="0"/>
-                              <Component id="button10" min="-2" max="-2" attributes="0"/>
-                              <Component id="button9" min="-2" max="-2" attributes="0"/>
-                              <Component id="button4" min="-2" max="-2" attributes="0"/>
-                              <Component id="button11" min="-2" max="-2" attributes="0"/>
-                              <Component id="button16" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="button14" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="button15" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="button13" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="AgregarAListas" min="-2" max="-2" attributes="0"/>
+                              <Component id="EliminarSongs" min="-2" max="-2" attributes="0"/>
+                              <Component id="WacharSongs" min="-2" max="-2" attributes="0"/>
+                              <Component id="AgregarSongs" min="-2" max="-2" attributes="0"/>
+                              <Component id="ModSongs" min="-2" max="-2" attributes="0"/>
+                              <Component id="AddLists" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="DesaparecerLists" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="WacharLists" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="MODOLISTS" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="30" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="button17" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="Salide" min="-2" pref="30" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -434,25 +437,25 @@
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="button12" min="-2" max="-2" attributes="0"/>
+                          <Component id="AgregarAListas" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="button9" min="-2" max="-2" attributes="0"/>
+                          <Component id="WacharSongs" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="button10" min="-2" max="-2" attributes="0"/>
+                          <Component id="EliminarSongs" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="button4" min="-2" max="-2" attributes="0"/>
+                          <Component id="AgregarSongs" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="button11" min="-2" max="-2" attributes="0"/>
+                          <Component id="ModSongs" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                          <Component id="button16" min="-2" max="-2" attributes="0"/>
+                          <Component id="AddLists" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="button15" min="-2" max="-2" attributes="0"/>
+                          <Component id="WacharLists" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="button14" min="-2" max="-2" attributes="0"/>
+                          <Component id="DesaparecerLists" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="button13" min="-2" max="-2" attributes="0"/>
+                          <Component id="MODOLISTS" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="button17" min="-2" max="-2" attributes="0"/>
+                          <Component id="Salide" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -460,11 +463,6 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="java.awt.Button" name="button12">
-          <Properties>
-            <Property name="label" type="java.lang.String" value="Agregar Listas"/>
-          </Properties>
-        </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane3">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -472,53 +470,61 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTree" name="jTree2">
+            <Component class="javax.swing.JTree" name="Arbolito2">
             </Component>
           </SubComponents>
         </Container>
-        <Component class="java.awt.Button" name="button11">
+        <Component class="java.awt.Button" name="AgregarAListas">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="Agregar Listas"/>
+          </Properties>
+        </Component>
+        <Component class="java.awt.Button" name="WacharSongs">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="Ver Canciones"/>
+          </Properties>
+        </Component>
+        <Component class="java.awt.Button" name="EliminarSongs">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="Eliminar Canciones"/>
+          </Properties>
+        </Component>
+        <Component class="java.awt.Button" name="AgregarSongs">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="Agregar Canciones"/>
+          </Properties>
+        </Component>
+        <Component class="java.awt.Button" name="ModSongs">
           <Properties>
             <Property name="label" type="java.lang.String" value="MOD Canciones"/>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="java.awt.Button" name="button4">
+        <Component class="java.awt.Button" name="AddLists">
           <Properties>
-            <Property name="label" type="java.lang.String" value="Agregar Canciones"/>
+            <Property name="label" type="java.lang.String" value="Agregar Listas"/>
           </Properties>
         </Component>
-        <Component class="java.awt.Button" name="button9">
+        <Component class="java.awt.Button" name="WacharLists">
           <Properties>
-            <Property name="label" type="java.lang.String" value="Ver Canciones"/>
+            <Property name="label" type="java.lang.String" value="Ver Listas"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="WacharListsActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="java.awt.Button" name="DesaparecerLists">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="Eliminar Listas"/>
           </Properties>
         </Component>
-        <Component class="java.awt.Button" name="button10">
-          <Properties>
-            <Property name="label" type="java.lang.String" value="Eliminar Canciones"/>
-          </Properties>
-        </Component>
-        <Component class="java.awt.Button" name="button13">
+        <Component class="java.awt.Button" name="MODOLISTS">
           <Properties>
             <Property name="label" type="java.lang.String" value="MOD Listas"/>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="java.awt.Button" name="button14">
-          <Properties>
-            <Property name="label" type="java.lang.String" value="Eliminar Listas"/>
-          </Properties>
-        </Component>
-        <Component class="java.awt.Button" name="button15">
-          <Properties>
-            <Property name="label" type="java.lang.String" value="Ver Listas"/>
-          </Properties>
-        </Component>
-        <Component class="java.awt.Button" name="button16">
-          <Properties>
-            <Property name="label" type="java.lang.String" value="Agregar Listas"/>
-          </Properties>
-        </Component>
-        <Component class="java.awt.Button" name="button17">
+        <Component class="java.awt.Button" name="Salide">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="99" type="rgb"/>
@@ -527,36 +533,6 @@
           </Properties>
         </Component>
       </SubComponents>
-    </Container>
-    <Container class="javax.swing.JFrame" name="CrearOyentes">
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-    </Container>
-    <Container class="javax.swing.JFrame" name="CrearArtistas">
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-      </Layout>
     </Container>
   </NonVisualComponents>
   <Properties>
@@ -601,6 +577,10 @@
               </Group>
               <EmptySpace pref="77" max="32767" attributes="0"/>
           </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="Salide1" min="-2" pref="30" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -615,7 +595,8 @@
                   <Component id="button1" min="-2" max="-2" attributes="0"/>
                   <Component id="button2" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+              <Component id="Salide1" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -644,6 +625,17 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
         <Property name="text" type="java.lang.String" value="Ingrese la opcion adecuada a su ingrese"/>
       </Properties>
+    </Component>
+    <Component class="java.awt.Button" name="Salide1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="99" type="rgb"/>
+        </Property>
+        <Property name="name" type="java.lang.String" value="" noResource="true"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Salide1ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
