@@ -1,19 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 
-/**
- *
- * @author cd507
- */
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 public class NewJFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form NewJFrame
-     */
+    static ArrayList<Usuarios> Global = new ArrayList();
+
     public NewJFrame() {
         initComponents();
+        Compro(Global);
+        Login.setSize(400, 250);
+        Login.setLocationRelativeTo(Base);
+        Login.setVisible(true);
     }
 
     /**
@@ -42,7 +40,7 @@ public class NewJFrame extends javax.swing.JFrame {
         label7 = new java.awt.Label();
         NombreUwu = new javax.swing.JTextField();
         label8 = new java.awt.Label();
-        Contrasenya = new javax.swing.JPasswordField();
+        ContrasenyaUwU = new javax.swing.JPasswordField();
         Empezar = new java.awt.Button();
         Tipos = new java.awt.Choice();
         Salida = new java.awt.Button();
@@ -72,11 +70,13 @@ public class NewJFrame extends javax.swing.JFrame {
         DesaparecerLists = new java.awt.Button();
         MODOLISTS = new java.awt.Button();
         Salide = new java.awt.Button();
+        Login = new javax.swing.JFrame();
+        Base = new javax.swing.JPanel();
         button1 = new java.awt.Button();
         button2 = new java.awt.Button();
+        Salide1 = new java.awt.Button();
         jLabel1 = new javax.swing.JLabel();
         label1 = new java.awt.Label();
-        Salide1 = new java.awt.Button();
 
         SingIn.setBackground(new java.awt.Color(0, 204, 0));
 
@@ -84,16 +84,16 @@ public class NewJFrame extends javax.swing.JFrame {
         label2.setForeground(new java.awt.Color(204, 255, 204));
         label2.setText("Sing-In");
 
-        label5.setForeground(new java.awt.Color(255, 255, 255));
+        label5.setForeground(new java.awt.Color(0, 0, 0));
         label5.setText("Ingrese su nombre de usuario: ");
 
-        label4.setForeground(new java.awt.Color(255, 255, 255));
+        label4.setForeground(new java.awt.Color(0, 0, 0));
         label4.setText("Confirme");
 
-        label3.setForeground(new java.awt.Color(255, 255, 255));
+        label3.setForeground(new java.awt.Color(0, 0, 0));
         label3.setText("Ingrese su contrasenya");
 
-        label6.setForeground(new java.awt.Color(255, 255, 255));
+        label6.setForeground(new java.awt.Color(0, 0, 0));
         label6.setText("Confirme");
 
         Salir.setBackground(new java.awt.Color(153, 0, 0));
@@ -120,8 +120,9 @@ public class NewJFrame extends javax.swing.JFrame {
                             .addComponent(nombreVeri, javax.swing.GroupLayout.Alignment.LEADING))))
                 .addContainerGap(68, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SingInLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         SingInLayout.setVerticalGroup(
             SingInLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,12 +147,13 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addComponent(ConfirmContra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19)
                 .addComponent(OpcionesDeTipoDeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                .addComponent(Salir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addComponent(Salir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jLabel2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jLabel2.setText("Sing-In");
+        jLabel2.setText("Log-In");
 
         label7.setForeground(new java.awt.Color(255, 255, 255));
         label7.setText("Ingrese su nombre de usuario: ");
@@ -160,6 +162,15 @@ public class NewJFrame extends javax.swing.JFrame {
         label8.setText("Ingrese su contrasenya");
 
         Empezar.setLabel("Empieze");
+        Empezar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpezarActionPerformed(evt);
+            }
+        });
+
+        Tipos.add("");
+        Tipos.add("Artistas");
+        Tipos.add("Oyente");
 
         Salida.setBackground(new java.awt.Color(153, 0, 0));
         Salida.setName(""); // NOI18N
@@ -168,9 +179,6 @@ public class NewJFrame extends javax.swing.JFrame {
         LogIN.getContentPane().setLayout(LogINLayout);
         LogINLayout.setHorizontalGroup(
             LogINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LogINLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Salida, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(LogINLayout.createSequentialGroup()
                 .addGroup(LogINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(LogINLayout.createSequentialGroup()
@@ -180,32 +188,39 @@ public class NewJFrame extends javax.swing.JFrame {
                             .addComponent(label8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Empezar, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
                             .addComponent(Tipos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Contrasenya)
-                            .addComponent(NombreUwu)))
+                            .addComponent(ContrasenyaUwU)
+                            .addComponent(NombreUwu))
+                        .addGap(80, 80, 80)
+                        .addComponent(Salida, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(LogINLayout.createSequentialGroup()
                         .addGap(236, 236, 236)
                         .addComponent(jLabel2)))
-                .addContainerGap(275, Short.MAX_VALUE))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
         LogINLayout.setVerticalGroup(
             LogINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LogINLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel2)
-                .addGap(56, 56, 56)
-                .addComponent(label7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(NombreUwu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(label8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Contrasenya, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addComponent(Tipos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LogINLayout.createSequentialGroup()
+                .addGroup(LogINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(LogINLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Salida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(2, 2, 2))
+                    .addGroup(LogINLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel2)
+                        .addGap(56, 56, 56)
+                        .addComponent(label7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(NombreUwu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(label8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ContrasenyaUwU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                        .addComponent(Tipos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)))
                 .addComponent(Empezar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addComponent(Salida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22))
         );
 
         MenuOyentes.setFocusable(false);
@@ -304,6 +319,11 @@ public class NewJFrame extends javax.swing.JFrame {
         jScrollPane3.setViewportView(Arbolito2);
 
         AgregarAListas.setLabel("Agregar Listas");
+        AgregarAListas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AgregarAListasActionPerformed(evt);
+            }
+        });
 
         WacharSongs.setLabel("Ver Canciones");
 
@@ -330,6 +350,11 @@ public class NewJFrame extends javax.swing.JFrame {
 
         Salide.setBackground(new java.awt.Color(153, 0, 0));
         Salide.setName(""); // NOI18N
+        Salide.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalideActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout MenuArtistaLayout = new javax.swing.GroupLayout(MenuArtista.getContentPane());
         MenuArtista.getContentPane().setLayout(MenuArtistaLayout);
@@ -386,17 +411,26 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addComponent(Salide, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        Login.setPreferredSize(new java.awt.Dimension(382, 245));
+
+        Base.setPreferredSize(new java.awt.Dimension(382, 245));
+        Base.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         button1.setLabel("Sing-in");
+        button1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button1ActionPerformed(evt);
+            }
+        });
+        Base.add(button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, -1, -1));
 
         button2.setLabel("Log-In");
-
-        jLabel1.setText("Bienvenido");
-
-        label1.setForeground(new java.awt.Color(204, 204, 255));
-        label1.setName(""); // NOI18N
-        label1.setText("Ingrese la opcion adecuada a su ingrese");
+        button2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button2ActionPerformed(evt);
+            }
+        });
+        Base.add(button2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 65, -1));
 
         Salide1.setBackground(new java.awt.Color(153, 0, 0));
         Salide1.setName(""); // NOI18N
@@ -405,42 +439,38 @@ public class NewJFrame extends javax.swing.JFrame {
                 Salide1ActionPerformed(evt);
             }
         });
+        Base.add(Salide1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 220, 30, -1));
+
+        jLabel1.setText("Bienvenido");
+        Base.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 78, 30));
+
+        label1.setForeground(new java.awt.Color(204, 204, 255));
+        label1.setName(""); // NOI18N
+        label1.setText("Ingrese la opcion adecuada a su ingrese");
+        Base.add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, -1, -1));
+
+        javax.swing.GroupLayout LoginLayout = new javax.swing.GroupLayout(Login.getContentPane());
+        Login.getContentPane().setLayout(LoginLayout);
+        LoginLayout.setHorizontalGroup(
+            LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Base, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        LoginLayout.setVerticalGroup(
+            LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Base, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(142, 142, 142)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(76, 76, 76)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(92, 92, 92)
-                                .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(77, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Salide1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(0, 382, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
-                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(85, 85, 85)
-                .addComponent(Salide1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(0, 245, Short.MAX_VALUE)
         );
 
         pack();
@@ -455,8 +485,62 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_WacharListsActionPerformed
 
     private void Salide1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Salide1ActionPerformed
-        dispose(); 
+        dispose();
     }//GEN-LAST:event_Salide1ActionPerformed
+
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+        Login.setVisible(false);
+        SingIn.setSize(463, 383);
+        SingIn.setLocationRelativeTo(null);
+        SingIn.setVisible(true);
+    }//GEN-LAST:event_button1ActionPerformed
+
+    private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
+        Login.setVisible(false);
+        LogIN.setSize(463, 383);
+        LogIN.setLocationRelativeTo(null);
+        LogIN.setVisible(true);
+    }//GEN-LAST:event_button2ActionPerformed
+
+    private void EmpezarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpezarActionPerformed
+        String paca1, paca2, paca3;
+        paca1 = NombreUwu.getText();
+        paca2 = ContrasenyaUwU.getSelectedText();
+        paca3 = Tipos.getSelectedItem();
+
+        if ((paca3.equalsIgnoreCase("Artistas")) || (paca3.equalsIgnoreCase("Oyentes"))) {
+            for (int i = 0; i < Global.size(); i++) {
+                if ((Global.get(i).getNombreUWU().equals(paca1)) && (Global.get(i).getContNYA().equals(paca2))) {
+                    if ((Global.get(i) instanceof Artistas)) {
+                        Login.setVisible(false);
+                        MenuArtista.setSize(800, 700);
+                        MenuArtista.setLocationRelativeTo(null);
+                        MenuArtista.setVisible(true);
+                    }
+                    if ((Global.get(i) instanceof Oyentes)) {
+                        Login.setVisible(false);
+                        MenuOyentes.setSize(800, 700);
+                        MenuOyentes.setLocationRelativeTo(null);
+                        MenuOyentes.setVisible(true);
+                    }
+                }
+            }
+        }
+    }//GEN-LAST:event_EmpezarActionPerformed
+
+    private void SalideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalideActionPerformed
+        
+    }//GEN-LAST:event_SalideActionPerformed
+
+    private void AgregarAListasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarAListasActionPerformed
+    String mam1=  JOptionPane.showInputDialog(MenuArtista, "Ingrese el nuevo nombre de la Lista");
+    ArrayList<Canciones>List= new ArrayList();
+    ListasDeRepro pas= new ListasDeRepro(List,mam1);
+    
+    
+    
+        
+    }//GEN-LAST:event_AgregarAListasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -488,11 +572,19 @@ public class NewJFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NewJFrame().setVisible(true);
+                new NewJFrame();
             }
         });
     }
+    public static void Vendo(ArrayList<Usuarios> Compro) {
 
+        return Compro;
+    }
+    
+    public static ArrayList<Usuarios> Compro(ArrayList<Usuarios> Compro) {
+
+        return Compro;
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Button AddLists;
     private java.awt.Button AgregarAListas;
@@ -500,15 +592,17 @@ public class NewJFrame extends javax.swing.JFrame {
     private java.awt.Button AgregarSongs;
     private javax.swing.JTree Arbolito1;
     private javax.swing.JTree Arbolito2;
+    private javax.swing.JPanel Base;
     private javax.swing.JPasswordField ConfirmContra;
     private javax.swing.JPasswordField Contra;
-    private javax.swing.JPasswordField Contrasenya;
+    private javax.swing.JPasswordField ContrasenyaUwU;
     private java.awt.Button DesaparecerLists;
     private java.awt.Button EliminarListas;
     private java.awt.Button EliminarSongs;
     private java.awt.Button Empezar;
     private javax.swing.JList<String> Lista1;
     private javax.swing.JFrame LogIN;
+    private javax.swing.JFrame Login;
     private java.awt.Button MODListas;
     private java.awt.Button MODOLISTS;
     private javax.swing.JFrame MenuArtista;
